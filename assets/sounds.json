@@ -1,0 +1,128 @@
+{
+  "Mods": [
+    {
+      "name": "Calm",
+      "logo": "assets/Buttons/Calm - Mood.png",
+      "mainimage": "assets/calm/calm main.jpeg",
+      "title": "Calm Sounds",
+      "poet": "It's all about finding the calm in the chaos.",
+      "soundsimage": [
+        "assets/calm/calm-1.jpeg",
+        "assets/calm/Calm -2.jpeg",
+        "assets/calm/calm-3.jpeg",
+        "assets/calm/calm-4.jpg"
+      ],
+      "listening": [
+        "58938 Listening",
+        "38444 Listening",
+        "90364 Listening",
+        "12346 Listening"
+      ],
+      "soundsname": [
+        "Calm and Relaxing",
+        "Calm Meditation",
+        "Calm Music",
+        "Calm Your Anxiety"
+      ],
+      "soundspath": [
+        "Sounds/Calm/Calm and Relaxing Music.mp3",
+        "Sounds/Calm/Calm Meditation Music To Relax Mind.mp3",
+        "Sounds/Calm/Calm Music.mp3",
+        "Sounds/Calm/Calm Your Anxiety.mp3"
+      ]
+    },
+    {
+      "name": "Relex",
+      "logo": "assets/Buttons/Relax -  Mood.png",
+      "mainimage": "assets/relex/relex main.png",
+      "title": "Relex Sounds",
+      "poet": "Sometimes the most productive thing you can do is relax.",
+      "soundsimage": [
+        "assets/relex/relex-1.png",
+        "assets/relex/relex-2.png",
+        "assets/relex/relex-3.png",
+        "assets/relex/relex-4.png"
+      ],
+      "listening": [
+        "34266 Listening",
+        "45637 Listening",
+        "93674 Listening",
+        "29933 Listening"
+      ],
+      "soundsname": [
+        "Heavy Rainfall ...",
+        "Rain Sounds for...",
+        "Relaxing Music",
+        "Help you Sleep ..."
+      ],
+      "soundspath": [
+        "Sounds/Relax/Heavy Rainfall Thunder.mp3",
+        "Sounds/Relax/Rain Sounds for Relax Studying.mp3",
+        "Sounds/Relax/Relaxing Music.mp3",
+        "Sounds/Relax/Relaxing Music to Help you Sleep Deep Sleep Inner Peace.mp3"
+      ]
+    },
+    {
+      "name": "Fouce",
+      "logo": "assets/Buttons/Focus Mood.png",
+      "mainimage": "assets/fouce/fouce-main.png",
+      "title": "Fouce Sounds",
+      "poet": "The successful warrior is the average man, with laser-like focus.",
+      "soundsimage": [
+        "assets/fouce/fouce-1.jpeg",
+        "assets/fouce/fouce -2.jpeg",
+        "assets/fouce/fouce-3.png",
+        "assets/fouce/fouce-4.png"
+      ],
+      "listening": [
+        "22883 Listening",
+        "12883 Listening",
+        "33374 Listening",
+        "37282 Listening"
+      ],
+      "soundsname": [
+        "Focus and Relax... ",
+        "Om Meditation",
+        "Rain and Thunde...",
+        "Work Music"
+      ],
+      "soundspath": [
+        "Sounds/Focus/Focus and Relaxing Music.mp3",
+        "Sounds/Focus/Om Meditation For Focus.mp3",
+        "Sounds/Focus/Rain and Thunderstorm Sounds For Focus.mp3",
+        "Sounds/Focus/Work Music For Focus.mp3"
+      ]
+    },
+    {
+      "name": "Peace",
+      "logo": "assets/Buttons/peace.jpg",
+      "mainimage": "assets/peace/peace-main.png",
+      "title": "Peace Sounds",
+      "poet": "Peace begins with a smile.",
+      "soundsimage": [
+        "assets/peace/peace-1.png",
+        "assets/peace/peace-2.png",
+        "assets/peace/peace-3.jpeg",
+        "assets/peace/peace-4.jpeg"
+      ],
+      "listening": [
+        "12362 Listening",
+        "44252 Listening",
+        "33743 Listening",
+        "12666 Listening"
+      ],
+      "soundsname": [
+        "Peaceful Sleep...",
+        "Isha Peace Music",
+        "Peace",
+        "Powerful Peace..."
+      ],
+      "soundspath": [
+        "Sounds/Peace/Best Relaxing Peaceful Sleep Music.mp3",
+        "Sounds/Peace/Isha Peace Music.mp3",
+        "Sounds/Peace/Peace.mp3",
+        "Sounds/Peace/Powerful Peace Music .mp3"
+      ]
+    }
+  ]
+}
