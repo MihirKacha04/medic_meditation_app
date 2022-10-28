@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:medic_meditation_app/Utils/app_colors.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
@@ -13,7 +14,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     double appbar = kToolbarHeight;
     return  AppBar(
-      backgroundColor:  Color(0xff253334),
+      backgroundColor: AppColor.themeColor,
       leading:    Padding(
         padding: EdgeInsets.all(appbar * .2),
         child: Image.asset("assets/Buttons/Logo (1).png",height: appbar * .8,),

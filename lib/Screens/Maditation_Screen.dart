@@ -1,11 +1,13 @@
 import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medic_meditation_app/Models/sounds_model.dart';
 import 'package:medic_meditation_app/Screens/appbar_Scareen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'Meditation_Sound_Screen.dart';
+import '../AppRoutes/app_routes.dart';
+import '../Utils/app_colors.dart';
 
 class MeditationScreen extends StatelessWidget {
 
@@ -15,11 +17,10 @@ class MeditationScreen extends StatelessWidget {
     double hight = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     double statusbar = MediaQuery.of(context).padding.top;
-    double navigationbar = MediaQuery.of(context).padding.bottom;
     double appbar = kToolbarHeight;
     double bodyheight = hight - statusbar - appbar;
     return Scaffold(
-      backgroundColor: Color(0xff253334),
+      backgroundColor: AppColor.themeColor,
       appBar: MyAppBar("Meditation 101"),
       body: SafeArea(
           child: Padding(
@@ -78,6 +79,8 @@ class MeditationScreen extends StatelessWidget {
                                                 crossAxisAlignment: CrossAxisAlignment.center,
                                                 children: [
                                                   InkWell(
+                                                    highlightColor: AppColor.transparent,
+                                                    splashColor: AppColor.transparent,
                                                     onTap: () {
                                                      _luanchUrl("https://www.youtube.com/watch?v=U9YKY7fdwyg&ab_channel=Goodful");
                                                     },
@@ -96,6 +99,8 @@ class MeditationScreen extends StatelessWidget {
                                                   ),
                                                   Divider(color: Color(0xff253334),thickness: 2),
                                                   InkWell(
+                                                    highlightColor: AppColor.transparent,
+                                                    splashColor: AppColor.transparent,
                                                     onTap: () {
                                                       print("object");
                                                     _luanchUrl("https://positivepsychology.com/benefits-of-meditation/");
@@ -118,7 +123,7 @@ class MeditationScreen extends StatelessWidget {
                                             ),
                                           )
                                           
-                                      )..show();
+                                      ).show();
                                     },
                                     child: Container(
                                       height: bodyheight * .06,
@@ -183,13 +188,9 @@ class MeditationScreen extends StatelessWidget {
                           Padding(
                             padding: EdgeInsets.only(bottom: bodyheight * .03),
                             child: InkWell(
-                              borderRadius: BorderRadius.circular(bodyheight * .02),
-                              onTap: () {
-                                Navigator.push(context, MaterialPageRoute(
-                                  builder: (context) {
-                                    return MaditationSoundScreen(itemindex,soundsTitle[itemindex]);
-                                  },));
-                              },
+                              highlightColor: AppColor.transparent,
+                              splashColor: AppColor.transparent,
+                              onTap: () =>  Get.toNamed(AppRoutes.meditationSoundScreen, arguments: [itemindex,soundsTitle[itemindex]]),
                               child: Row(
                                 children: [
                                   Container(

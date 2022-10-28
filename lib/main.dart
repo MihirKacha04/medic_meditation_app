@@ -1,22 +1,34 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:medic_meditation_app/AppRoutes/app_routes.dart';
+import 'package:medic_meditation_app/AppRoutes/app_routes_generator.dart';
 
-import 'Screens/My_Splash.dart';
 
 void main(){
   runApp(
-    Start()
+    const MyApp()
   );
 }
 
-class Start extends StatelessWidget {
-  const Start({Key? key}) : super(key: key);
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-debugShowCheckedModeBanner: false,
-      home: MySplash(),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: getInitalRoutes(),
+      getPages: AppRoutesGenerator.route,
     );
   }
+
+  String getInitalRoutes() => AppRoutes.splashScreen;
 }
+
+

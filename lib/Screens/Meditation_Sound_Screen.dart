@@ -1,12 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medic_meditation_app/Screens/appbar_Scareen.dart';
 
+import '../Utils/app_colors.dart';
+
 class MaditationSoundScreen extends StatefulWidget {
-  int index;
-  String soundsTitle;
-  MaditationSoundScreen(this.index, this.soundsTitle);
+  int index = Get.arguments[0];
+  String soundsTitle = Get.arguments[1];
 
 
   @override
@@ -19,11 +22,10 @@ class _MaditationSoundScreenState extends State<MaditationSoundScreen> {
     double hight = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
     double statusbar = MediaQuery.of(context).padding.top;
-    double navigationbar = MediaQuery.of(context).padding.bottom;
     double appbar = kToolbarHeight;
     double bodyheight = hight-statusbar - appbar;
     return Scaffold(
-      backgroundColor: Color(0xff253334),
+      backgroundColor: AppColor.themeColor,
 
       appBar: MyAppBar("Meditation"),
       body: Padding(
