@@ -1,3 +1,4 @@
+import 'package:audio_video_progress_bar/audio_video_progress_bar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,8 +11,8 @@ class SoundScreen extends StatelessWidget {
   String AppbarTitel;
   String image;
   String Soundtitle;
-  SoundScreen(this.AppbarTitel, this.image,this.Soundtitle);
 
+  SoundScreen(this.AppbarTitel, this.image, this.Soundtitle);
 
   @override
   Widget build(BuildContext context) {
@@ -20,94 +21,96 @@ class SoundScreen extends StatelessWidget {
     double statusbar = MediaQuery.of(context).padding.top;
     double navigationbar = MediaQuery.of(context).padding.bottom;
     double appbar = kToolbarHeight;
-    double bodyheight = hight-statusbar - appbar;
-    player_controller _controller = Get.put(player_controller());
+    double bodyheight = hight - statusbar - appbar;
     return Scaffold(
-      backgroundColor: Color(0xff253334),
-      appBar: MyAppBar(AppbarTitel),
-
-      body: GetBuilder(
-        init: _controller,
-        builder: (controller){
-        return Padding(
-          padding:  EdgeInsets.only(top: bodyheight * .04,left: width * .04 ,right: width * .04),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Center(child: CircleAvatar(radius: bodyheight * .2,backgroundImage: AssetImage(image),)),
-
-              Padding(
-                padding:  EdgeInsets.only(top: bodyheight * .05),
-                child: Text(Soundtitle,
-                  style: GoogleFonts.alegreyaSans(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                      fontSize: width * .08
-                  ),
-                ),
-              ),
-
-              Slider(
-                thumbColor: Colors.green,
-                max: _controller.duration.inSeconds.toDouble(),
-                  value: _controller.position.inSeconds.toDouble(),
-                  onChanged: (double value) {   }
-              ),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        backgroundColor: Color(0xff253334),
+        appBar: MyAppBar(AppbarTitel),
+        body: GetBuilder(
+          init: player_controller(),
+          builder: (player_controller controller) {
+            return Padding(
+              padding: EdgeInsets.only(top: bodyheight * .04, left: width * .04, right: width * .04),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("${_controller.duration.inSeconds.toString()}"),
-                  Text("${_controller.position.inSeconds.toString()}")
-                ],
-              ),
-
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-
-                  CupertinoButton(
-                    child: ImageIcon(AssetImage('assets/backword.png'),color: Colors.white),
-                    onPressed: () {},
+                  Center(
+                      child: CircleAvatar(
+                    radius: bodyheight * .2,
+                    backgroundImage: AssetImage(image),
+                  )),
+                  Padding(
+                    padding: EdgeInsets.only(top: bodyheight * .05),
+                    child: Text(
+                      Soundtitle,
+                      style: GoogleFonts.alegreyaSans(color: Colors.white, fontWeight: FontWeight.w600, fontSize: width * .08),
+                    ),
                   ),
-                  CupertinoButton(
-                    child:
-                   _controller.isplaying
-                    ?  Icon(CupertinoIcons.pause_circle_fill,color: Colors.white,size: bodyheight * .1)
-                    :  Icon(CupertinoIcons.play_circle_fill,color:  Colors.white,size: bodyheight * .1,),
-                    onPressed: () {},
-                  ),
-                  CupertinoButton(
-                    child: ImageIcon(AssetImage('assets/forword.png'),color: Colors.white,),
-                    onPressed: () {
-                      _controller.audiotoggele();
+                  ProgressBar(
+                    thumbGlowColor: Colors.white24,
+                    progress: controller.player.position,
+                    total: controller.player.duration ?? Duration(seconds: 0),
+                    baseBarColor: Colors.white10,
+                    progressBarColor: Colors.white,
+                    thumbColor: Colors.white,
+                    onDragUpdate: (details) {
+                      controller.player.seek(details.timeStamp);
+                      controller.update();
+                    },
+                    onSeek: (value) {
+                      print(value);
+                      controller.player.seek(value);
+                      controller.update();
                     },
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CupertinoButton(
+                        child: ImageIcon(AssetImage('assets/ic_replay10sec.png'), size: Get.textScaleFactor * 30, color: Colors.white),
+                        onPressed: () {
+                          controller.player.seek(Duration(seconds: controller.player.position.inSeconds - 10));
+                        },
+                      ),
+                      CupertinoButton(
+                        child: controller.isplaying
+                            ? Icon(CupertinoIcons.pause_circle_fill, color: Colors.white, size: bodyheight * .1)
+                            : Icon(
+                                CupertinoIcons.play_circle_fill,
+                                color: Colors.white,
+                                size: bodyheight * .1,
+                              ),
+                        onPressed: () {
+                          controller.playpauseonTap();
+                        },
+                      ),
+                      CupertinoButton(
+                        child: ImageIcon(
+                          AssetImage('assets/ic_skip10sec.png'),
+                          size: Get.textScaleFactor * 30,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          controller.player.seek(Duration(seconds: controller.player.position.inSeconds + 10));
+                        },
+                      ),
+                    ],
+                  ),
+                  Center(
+                    child: CupertinoButton(
+                      child: Icon(
+                        Icons.loop,
+                        color: Colors.white,
+                        size: bodyheight * .05,
+                      ),
+                      onPressed: () {
+                        controller.player.seek(Duration(seconds: 0));
+                      },
+                    ),
+                  )
                 ],
               ),
-
-              Center(
-                child: CupertinoButton(
-                  child: Icon(Icons.loop,color: Colors.white,size: bodyheight * .05,),
-                  onPressed: () {},
-                ),
-              )
-
-
-            ],
-          ),
-        );
-      },)
-
-
-    );
+            );
+          },
+        ));
   }
 }
-
-
-
-
-
-
-
-

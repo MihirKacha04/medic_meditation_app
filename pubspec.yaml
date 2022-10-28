@@ -38,7 +38,8 @@ dependencies:
   url_launcher: ^6.1.5
   awesome_dialog: ^3.0.1
   get: ^4.6.5
-  audioplayers: ^1.1.1
+  just_audio: ^0.9.30
+  audio_video_progress_bar: ^0.11.0
 
 dev_dependencies:
   flutter_test:
@@ -74,10 +75,10 @@ flutter:
      - assets/peace/
      - assets/relex/
      - assets/Meditation/
-     - Sounds/Calm/
-     - Sounds/Focus/
-     - Sounds/Peace/
-     - Sounds/Relax/
+     - assets/Sounds/Calm/
+     - assets/Sounds/Focus/
+     - assets/Sounds/Peace/
+     - assets/Sounds/Relax/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
