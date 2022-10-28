@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 import 'package:just_audio/just_audio.dart';
 
@@ -6,13 +7,24 @@ class player_controller extends GetxController {
   Duration position = Duration.zero;
   Duration duration = Duration.zero;
   bool isplaying = false;
+  var data = Get.arguments;
+  String? appbartitle;
+  String? soundsimage;
+  String? soundsname;
+  String? soundspath;
 
   @override
   void onInit() {
     // TODO: implement onInit
     super.onInit();
-    player.setAsset("assets/Sounds/Calm/Calm Music.mp3");
-    player.createPositionStream();
+    appbartitle = data[0];
+    soundsimage = data[1];
+    soundsname = data[2];
+    soundspath = data[3];
+    player.setAsset(soundspath!);
+    player.positionStream.listen((event) {
+      update();
+    });
     update();
   }
 

@@ -3,11 +3,8 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:medic_meditation_app/AppRoutes/app_routes.dart';
 import 'package:medic_meditation_app/AppRoutes/app_routes_generator.dart';
 
-
-void main(){
-  runApp(
-    const MyApp()
-  );
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -29,5 +26,3 @@ class _MyAppState extends State<MyApp> {
 
   String getInitalRoutes() => AppRoutes.splashScreen;
 }
-
-

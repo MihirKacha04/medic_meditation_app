@@ -25,10 +25,10 @@
         "Calm Your Anxiety"
       ],
       "soundspath": [
-        "Sounds/Calm/Calm and Relaxing Music.mp3",
-        "Sounds/Calm/Calm Meditation Music To Relax Mind.mp3",
-        "Sounds/Calm/Calm Music.mp3",
-        "Sounds/Calm/Calm Your Anxiety.mp3"
+        "assets/Sounds/Calm/Calm and Relaxing Music.mp3",
+        "assets/Sounds/Calm/Calm Meditation Music To Relax Mind.mp3",
+        "assets/Sounds/Calm/Calm Music.mp3",
+        "assets/Sounds/Calm/Calm Your Anxiety.mp3"
       ]
     },
     {
@@ -56,10 +56,10 @@
         "Help you Sleep ..."
       ],
       "soundspath": [
-        "Sounds/Relax/Heavy Rainfall Thunder.mp3",
-        "Sounds/Relax/Rain Sounds for Relax Studying.mp3",
-        "Sounds/Relax/Relaxing Music.mp3",
-        "Sounds/Relax/Relaxing Music to Help you Sleep Deep Sleep Inner Peace.mp3"
+        "assets/Sounds/Relax/Heavy Rainfall Thunder.mp3",
+        "assets/Sounds/Relax/Rain Sounds for Relax Studying.mp3",
+        "assets/Sounds/Relax/Relaxing Music.mp3",
+        "assets/Sounds/Relax/Relaxing Music to Help you Sleep Deep Sleep Inner Peace.mp3"
       ]
     },
     {
@@ -87,10 +87,10 @@
         "Work Music"
       ],
       "soundspath": [
-        "Sounds/Focus/Focus and Relaxing Music.mp3",
-        "Sounds/Focus/Om Meditation For Focus.mp3",
-        "Sounds/Focus/Rain and Thunderstorm Sounds For Focus.mp3",
-        "Sounds/Focus/Work Music For Focus.mp3"
+        "assets/Sounds/Focus/Focus and Relaxing Music.mp3",
+        "assets/Sounds/Focus/Om Meditation For Focus.mp3",
+        "assets/Sounds/Focus/Rain and Thunderstorm Sounds For Focus.mp3",
+        "assets/Sounds/Focus/Work Music For Focus.mp3"
       ]
     },
     {
@@ -118,10 +118,10 @@
         "Powerful Peace..."
       ],
       "soundspath": [
-        "Sounds/Peace/Best Relaxing Peaceful Sleep Music.mp3",
-        "Sounds/Peace/Isha Peace Music.mp3",
-        "Sounds/Peace/Peace.mp3",
-        "Sounds/Peace/Powerful Peace Music .mp3"
+        "assets/Sounds/Peace/Best Relaxing Peaceful Sleep Music.mp3",
+        "assets/Sounds/Peace/Isha Peace Music.mp3",
+        "assets/Sounds/Peace/Peace.mp3",
+        "assets/Sounds/Peace/Powerful Peace Music .mp3"
       ]
     }
   ]
