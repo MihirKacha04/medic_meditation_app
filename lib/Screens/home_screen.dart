@@ -1,41 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:medic_meditation_app/AppRoutes/app_routes.dart';
 import 'package:medic_meditation_app/Models/sounds_model.dart';
-import 'package:medic_meditation_app/Screens/Maditation_Screen.dart';
-import 'package:medic_meditation_app/Screens/Sounds_Screen.dart';
-import 'package:medic_meditation_app/Screens/appbar_Scareen.dart';
+import 'package:medic_meditation_app/Utils/app_image_path.dart';
 
-class MainScreen extends StatelessWidget {
+import '../Utils/app_colors.dart';
+import 'appbar_Scareen.dart';
 
 
-  Welcome welcome;
-
-  MainScreen(this.welcome);
-
+class HomeScreen extends StatefulWidget {
+   Welcome welcome = Get.arguments;
+   HomeScreen({Key? key}) : super(key: key);
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
   Widget build(BuildContext context) {
-    double hight = MediaQuery
-        .of(context)
-        .size
-        .height;
-    double width = MediaQuery
-        .of(context)
-        .size
-        .width;
-    double statusbar = MediaQuery
-        .of(context)
-        .padding
-        .top;
-    double navigationbar = MediaQuery
-        .of(context)
-        .padding
-        .bottom;
+    double hight = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    double statusbar = MediaQuery.of(context).padding.top;
     double appbar = kToolbarHeight;
     double bodyheight = hight - statusbar - appbar;
-    return Scaffold(
-      backgroundColor: Color(0xff253334),
-
+    return  Scaffold(
+      backgroundColor: AppColor.themeColor,
 
       appBar: MyAppBar("Meditation"),
 
@@ -76,23 +67,22 @@ class MainScreen extends StatelessWidget {
                   itemCount: 4,
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
                   itemBuilder: (context, index) {
                     return Column(
                       children: [
-                        InkWell(onTap: () {
-                          Navigator.push(context, MaterialPageRoute(
-                            builder: (context) =>
-                                SoundsScreen(index, welcome),));
-                        },
+                        InkWell(
+                          highlightColor: AppColor.transparent,
+                          splashColor: AppColor.transparent,
+
+                          onTap: () => Get.toNamed(AppRoutes.soundsScreen , arguments: [index, widget.welcome]),
                           child: Container(
                               height: bodyheight * .15,
                               child: ClipRRect(
                                   borderRadius: BorderRadius.circular(
                                       bodyheight * .048),
                                   child: Image.asset(
-                                    "${welcome.mods![index].logo}",
+                                    "${widget.welcome.mods![index].logo}",
                                     fit: BoxFit.fill,))
                           ),
                         ),
@@ -100,7 +90,7 @@ class MainScreen extends StatelessWidget {
                         Padding(
 
                           padding: EdgeInsets.only(top: bodyheight * .01),
-                          child: Text("${welcome.mods![index].title}",
+                          child: Text("${widget.welcome.mods![index].title}",
                             style: GoogleFonts.alegreyaSans(
                               color: Colors.white,
 
@@ -116,9 +106,9 @@ class MainScreen extends StatelessWidget {
                     width * .07, bodyheight * .02, width * .07, 0),
 
                 child: InkWell(
-                  onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => MeditationScreen()));
-                  },
+                  highlightColor: AppColor.transparent,
+                  splashColor: AppColor.transparent,
+                  onTap: () => Get.toNamed(AppRoutes.meditationScreen),
                   child: Container(
                     height: bodyheight * .25,
                     width: width,
@@ -185,7 +175,7 @@ class MainScreen extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Image.asset(
-                                    "assets/FullScreens/posterImage.png",
+                                    AppImagePath.ic_posterImage,
                                     width: width / 2,),
                                 ],
                               ),
@@ -207,3 +197,6 @@ class MainScreen extends StatelessWidget {
     );
   }
 }
+
+
+
