@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: EdgeInsets.only(
                     left: width * .07, top: bodyheight * .02),
-                child: Text("Welcome back,afreen!",
+                child: Text("Welcome back!",
                   style: GoogleFonts.alegreya(
                       color: Colors.white,
                       fontWeight: FontWeight.w400,
@@ -134,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
 
-                                  Text("Learn Metditation",
+                                  Text("Learn Meditation",
                                     style: GoogleFonts.alegreyaSans(
                                         color: Color(0xff253334),
                                         fontSize: width * .04

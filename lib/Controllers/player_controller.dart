@@ -1,11 +1,9 @@
 import 'package:get/get.dart';
-import 'package:get/state_manager.dart';
 import 'package:just_audio/just_audio.dart';
 
 class player_controller extends GetxController {
   AudioPlayer player = AudioPlayer();
-  Duration position = Duration.zero;
-  Duration duration = Duration.zero;
+
   bool isplaying = false;
   var data = Get.arguments;
   String? appbartitle;

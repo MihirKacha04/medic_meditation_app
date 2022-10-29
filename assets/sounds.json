@@ -32,10 +32,10 @@
       ]
     },
     {
-      "name": "Relex",
+      "name": "Relax",
       "logo": "assets/Buttons/Relax -  Mood.png",
       "mainimage": "assets/relex/relex main.png",
-      "title": "Relex Sounds",
+      "title": "Relax Sounds",
       "poet": "Sometimes the most productive thing you can do is relax.",
       "soundsimage": [
         "assets/relex/relex-1.png",
@@ -63,10 +63,10 @@
       ]
     },
     {
-      "name": "Fouce",
+      "name": "Focus",
       "logo": "assets/Buttons/Focus Mood.png",
       "mainimage": "assets/fouce/fouce-main.png",
-      "title": "Fouce Sounds",
+      "title": "Focus Sounds",
       "poet": "The successful warrior is the average man, with laser-like focus.",
       "soundsimage": [
         "assets/fouce/fouce-1.jpeg",

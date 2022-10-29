@@ -9,9 +9,16 @@ import 'package:url_launcher/url_launcher.dart';
 import '../AppRoutes/app_routes.dart';
 import '../Utils/app_colors.dart';
 
-class MeditationScreen extends StatelessWidget {
 
 
+class MeditationScreen extends StatefulWidget {
+  const MeditationScreen({Key? key}) : super(key: key);
+
+  @override
+  State<MeditationScreen> createState() => _MeditationScreenState();
+}
+
+class _MeditationScreenState extends State<MeditationScreen> {
   @override
   Widget build(BuildContext context) {
     double hight = MediaQuery.of(context).size.height;
@@ -19,7 +26,7 @@ class MeditationScreen extends StatelessWidget {
     double statusbar = MediaQuery.of(context).padding.top;
     double appbar = kToolbarHeight;
     double bodyheight = hight - statusbar - appbar;
-    return Scaffold(
+    return  Scaffold(
       backgroundColor: AppColor.themeColor,
       appBar: MyAppBar("Meditation 101"),
       body: SafeArea(
@@ -69,7 +76,7 @@ class MeditationScreen extends StatelessWidget {
 
                                       AwesomeDialog(
                                           context: context,
-                                          dialogType: DialogType.NO_HEADER,
+                                          dialogType: DialogType.noHeader,
                                           animType: AnimType.bottomSlide,
                                           body: Padding(
                                             padding:  EdgeInsets.only(left: width * .03,right: width * .03,bottom:  bodyheight * .02),
@@ -82,20 +89,20 @@ class MeditationScreen extends StatelessWidget {
                                                     highlightColor: AppColor.transparent,
                                                     splashColor: AppColor.transparent,
                                                     onTap: () {
-                                                     _luanchUrl("https://www.youtube.com/watch?v=U9YKY7fdwyg&ab_channel=Goodful");
+                                                      _luanchUrl("https://www.youtube.com/watch?v=U9YKY7fdwyg&ab_channel=Goodful");
                                                     },
                                                     child: Row(
                                                       crossAxisAlignment: CrossAxisAlignment.center,
                                                       children: [
-                                                      Text("Technique of meditation",
-                                                      style: GoogleFonts.alegreyaSans(
-                                                        color: Color(0xff253334),
-                                                        fontSize: width * .05
-                                                      ),
-                                                      ),
+                                                        Text("Technique of meditation",
+                                                          style: GoogleFonts.alegreyaSans(
+                                                              color: Color(0xff253334),
+                                                              fontSize: width * .05
+                                                          ),
+                                                        ),
                                                         Spacer(),
                                                         Icon(Icons.slow_motion_video,color: Color(0xff253334),)
-                                                    ],),
+                                                      ],),
                                                   ),
                                                   Divider(color: Color(0xff253334),thickness: 2),
                                                   InkWell(
@@ -103,8 +110,8 @@ class MeditationScreen extends StatelessWidget {
                                                     splashColor: AppColor.transparent,
                                                     onTap: () {
                                                       print("object");
-                                                    _luanchUrl("https://positivepsychology.com/benefits-of-meditation/");
-                                                  },
+                                                      _luanchUrl("https://positivepsychology.com/benefits-of-meditation/");
+                                                    },
                                                     child: Row(
                                                       crossAxisAlignment: CrossAxisAlignment.center,
                                                       children: [
@@ -122,7 +129,7 @@ class MeditationScreen extends StatelessWidget {
                                               ),
                                             ),
                                           )
-                                          
+
                                       ).show();
                                     },
                                     child: Container(
@@ -190,7 +197,7 @@ class MeditationScreen extends StatelessWidget {
                             child: InkWell(
                               highlightColor: AppColor.transparent,
                               splashColor: AppColor.transparent,
-                              onTap: () =>  Get.toNamed(AppRoutes.meditationSoundScreen, arguments: [itemindex,soundsTitle[itemindex]]),
+                              onTap: () =>  Get.toNamed(AppRoutes.meditationSoundScreen, arguments: [soundsTitle[itemindex],soundsPath[itemindex]]),
                               child: Row(
                                 children: [
                                   Container(
@@ -250,14 +257,20 @@ class MeditationScreen extends StatelessWidget {
     );
   }
 
- _luanchUrl(String url) async {
-   if (await canLaunch(url)) {
-     await launch(url);
-   } else {
-     throw 'Could not launch $url';
-   }
+  _luanchUrl(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
   }
 
+  List soundsPath = [
+    "assets/Sounds/Meditation Music/10 Minutes Meditation Music for Positive Energy .mp3",
+    "assets/Sounds/Meditation Music/15 Minute Meditation Music.mp3",
+    "assets/Sounds/Meditation Music/20 min Awareness Meditation .mp3",
+    "assets/Sounds/Meditation Music/Singing bowl sound meditation.mp3"
+  ];
 
   List Listing = [
     "23422 Listenig",
@@ -280,5 +293,5 @@ class MeditationScreen extends StatelessWidget {
     "Singing bowl sound",
   ];
 
-
 }
+
