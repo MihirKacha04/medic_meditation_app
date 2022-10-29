@@ -20,10 +20,7 @@ class MeditationSoundScreenController extends GetxController{
   Future<void> onInit() async {
     // TODO: implement onInit
     super.onInit();
-
-    print("-- ----$audioPath");
-
-    await player.setAsset(audioPath);
+    await player.setUrl(audioPath);
     player.positionStream.listen((event) {
       double duration = convertintdouble(seconds: player.duration!.inSeconds);
       double position = convertintdouble(seconds: player.position.inSeconds);
@@ -52,7 +49,6 @@ class MeditationSoundScreenController extends GetxController{
         seconds = seconds-60;
         inminutes++;
       } else {
-        print("second $seconds");
         inminutes = inminutes + (seconds/100);
         break;
       }

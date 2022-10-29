@@ -266,10 +266,10 @@ class _MeditationScreenState extends State<MeditationScreen> {
   }
 
   List soundsPath = [
-    "assets/Sounds/Meditation Music/10 Minutes Meditation Music for Positive Energy .mp3",
-    "assets/Sounds/Meditation Music/15 Minute Meditation Music.mp3",
-    "assets/Sounds/Meditation Music/20 min Awareness Meditation .mp3",
-    "assets/Sounds/Meditation Music/Singing bowl sound meditation.mp3"
+    "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Mediation%20Music%2F10%20Minutes%20Meditation%20Music%20for%20Positive%20Energy.mp3?alt=media&token=e8867b20-00a6-49f8-9a38-d5229f3e92f1",
+    "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Mediation%20Music%2F15%20Minute%20Meditation%20Music.mp3?alt=media&token=0ef75b6d-c326-47dd-8479-ca544498adee",
+    "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Mediation%20Music%2F20%20min%20Awareness%20Meditation.mp3?alt=media&token=7f71e0c7-eee6-4609-813c-43e8e27a11c9",
+    "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Mediation%20Music%2FSinging%20bowl%20sound%20meditation.mp3?alt=media&token=e3bbafd4-b34d-456e-bb1a-cd7c4cff7a80"
   ];
 
   List Listing = [

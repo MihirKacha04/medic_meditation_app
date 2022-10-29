@@ -19,7 +19,7 @@ class player_controller extends GetxController {
     soundsimage = data[1];
     soundsname = data[2];
     soundspath = data[3];
-    player.setAsset(soundspath!);
+    player.setUrl(soundspath!);
     player.positionStream.listen((event) {
       update();
     });

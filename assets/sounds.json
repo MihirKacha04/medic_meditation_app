@@ -25,10 +25,10 @@
         "Calm Your Anxiety"
       ],
       "soundspath": [
-        "assets/Sounds/Calm/Calm and Relaxing Music.mp3",
-        "assets/Sounds/Calm/Calm Meditation Music To Relax Mind.mp3",
-        "assets/Sounds/Calm/Calm Music.mp3",
-        "assets/Sounds/Calm/Calm Your Anxiety.mp3"
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/calm%2FCalm%20and%20Relaxing%20Music.mp3?alt=media&token=eb79f91d-3774-4f96-9906-b4d47a29acc5",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/calm%2FCalm%20Meditation%20Music%20To%20Relax%20Mind.mp3?alt=media&token=7a063734-a718-4741-a1ba-dac144df5351",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/calm%2FCalm%20Music.mp3?alt=media&token=6bfcd610-1fcb-4c4c-aa8e-0c311ffae814",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/calm%2FCalm%20Your%20Anxiety.mp3?alt=media&token=4c95f31e-ada9-400c-933b-cd7178c12f8a"
       ]
     },
     {
@@ -56,10 +56,10 @@
         "Help you Sleep ..."
       ],
       "soundspath": [
-        "assets/Sounds/Relax/Heavy Rainfall Thunder.mp3",
-        "assets/Sounds/Relax/Rain Sounds for Relax Studying.mp3",
-        "assets/Sounds/Relax/Relaxing Music.mp3",
-        "assets/Sounds/Relax/Relaxing Music to Help you Sleep Deep Sleep Inner Peace.mp3"
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Relax%2FHeavy%20Rainfall%20Thunder.mp3?alt=media&token=5df35da2-f3cf-4d09-9760-593883892720",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Relax%2FRain%20Sounds%20for%20Relax%20Studying.mp3?alt=media&token=ce42625e-0bca-46d6-860d-c05daf744b72",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Relax%2FRelaxing%20Music.mp3?alt=media&token=5c8774a8-2705-4cfd-b3f3-c8c8ab0e45d7",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Relax%2FRelaxing%20Music%20to%20Help%20you%20Sleep%20Deep%20Sleep%20Inner%20Peace.mp3?alt=media&token=ccf5e077-40a7-43e8-94e9-df6a0140717c"
       ]
     },
     {
@@ -87,10 +87,10 @@
         "Work Music"
       ],
       "soundspath": [
-        "assets/Sounds/Focus/Focus and Relaxing Music.mp3",
-        "assets/Sounds/Focus/Om Meditation For Focus.mp3",
-        "assets/Sounds/Focus/Rain and Thunderstorm Sounds For Focus.mp3",
-        "assets/Sounds/Focus/Work Music For Focus.mp3"
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Focus%2FFocus%20and%20Relaxing%20Music.mp3?alt=media&token=1fe92fb3-0332-427a-8933-226a92a43897",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Focus%2FOm%20Meditation%20For%20Focus.mp3?alt=media&token=176e9aa1-4a5c-48c4-98a2-ed2fbd0afabb",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Focus%2FRain%20and%20Thunderstorm%20Sounds%20For%20Focus.mp3?alt=media&token=dac28eba-0030-43a9-bdbf-b826cf779a24",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Focus%2FWork%20Music%20For%20Focus.mp3?alt=media&token=920a687f-779c-4d84-aee1-df87386dd446"
       ]
     },
     {
@@ -118,10 +118,10 @@
         "Powerful Peace..."
       ],
       "soundspath": [
-        "assets/Sounds/Peace/Best Relaxing Peaceful Sleep Music.mp3",
-        "assets/Sounds/Peace/Isha Peace Music.mp3",
-        "assets/Sounds/Peace/Peace.mp3",
-        "assets/Sounds/Peace/Powerful Peace Music .mp3"
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Peace%2FBest%20Relaxing%20Peaceful%20Sleep%20Music.mp3?alt=media&token=ebfb9cd4-0d4b-4f3d-bb9f-ae95ee710b58",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Peace%2FIsha%20Peace%20Music.mp3?alt=media&token=a3e0670b-0c3e-48e6-879f-7318ef490098",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Peace%2FPeace.mp3?alt=media&token=f61b6ec8-5d59-4fb0-9095-5055148a67ef",
+        "https://firebasestorage.googleapis.com/v0/b/meditationapp-2fcc0.appspot.com/o/Peace%2FPowerful%20Peace%20Music.mp3?alt=media&token=760d8841-e907-41ed-a789-6e76f614ab27"
       ]
     }
   ]
